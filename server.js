@@ -8,6 +8,9 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.use(cors());
 
+const authRouter = require("./auth.js");
+app.use("/auth", authRouter);
+
 app.get("/", (req, res) => {
   res.send("YouTube to Spotify Converter is running!");
 });
