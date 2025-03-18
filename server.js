@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("YouTube to Spotify Converter API is running!");
+  res.send("YouTube to Spotify Converter is running!");
 });
 
 app.post("/convert", async (req, res) => {
@@ -28,6 +28,6 @@ app.post("/convert", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
