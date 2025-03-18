@@ -9,7 +9,9 @@ router.use(cookieParser());
 
 const SPOTIFY_CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const SPOTIFY_CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
-const REDIRECT_URI = "yt-spotify-converter-production.up.railway.app";
+const REDIRECT_URI = "https://yt-spotify-converter-production.up.railway.app/callback";
+
+console.log("SPOTIFY_CLIENT_ID =>", SPOTIFY_CLIENT_ID);
 
 const generateRandomString = (length) => {
   let text = '';
