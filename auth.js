@@ -22,7 +22,6 @@ const generateRandomString = (length) => {
   return text;
 };
 
-// 1️⃣ Login Route
 router.get('/login', (req, res) => {
   const state = generateRandomString(16);
   res.cookie('spotify_auth_state', state);
@@ -39,7 +38,6 @@ router.get('/login', (req, res) => {
   res.redirect(authURL);
 });
 
-// 2️⃣ Callback Route (Handles Token Exchange)
 router.get('/callback', async (req, res) => {
   const code = req.query.code || null;
   const state = req.query.state || null;
